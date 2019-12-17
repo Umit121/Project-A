@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 
+//Der Titel und die Angaben für die Göße,Schriftart etc.
 <head>
     <meta charset="UTF-8">
     <title>Kalender</title>
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-
+//Hintergrungfarbe
 <html><head><title>background-color</title>
 <style type="text/css">
 body { background-color:rgba(34, 65, 20, 0.911); font-weight:normal; font-family:Arial; font-size:100%; }
@@ -23,7 +24,7 @@ body { background-color:rgba(34, 65, 20, 0.911); font-weight:normal; font-family
 
 </head>
 <body>
-    
+    //Die Angaben bezüglich der Wochentage
 <div class="container col-sm-4 col-md-7 col-lg-6 mt-5">
     <div class="card">
         <h3 class="card-header" id="monthAndYear"></h3>
@@ -46,12 +47,13 @@ body { background-color:rgba(34, 65, 20, 0.911); font-weight:normal; font-family
         </table>
 
         <div class="form-inline">
-
+		//Hier wurde der Button für die Monate hinzugefügt, um die Monate wechseln zu können.
             <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Zurück</button>
 
             <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Nächster</button>
         </div>
         <br/>
+	//hier zeigt es in der Tabelle die Monate an und dass man von Monat zu Monat wechseln kann.									       
         <form class="form-inline">
             <label class="lead mr-2 ml-2" for="month">Wechsel zu: </label>
             <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
@@ -69,7 +71,7 @@ body { background-color:rgba(34, 65, 20, 0.911); font-weight:normal; font-family
                 <option value=11>Dez</option>
             </select>
 
-
+		//Hier sind Jahre aufgelistet die von unserem Kalender angezeigt werden.
             <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
             <option value=1990>1990</option>
             <option value=1991>1991</option>
@@ -113,7 +115,8 @@ body { background-color:rgba(34, 65, 20, 0.911); font-weight:normal; font-family
             <option value=2029>2029</option>
             <option value=2030>2030</option>
         </select></form><br><br>
-		
+														   
+	//Hier haben wir den Platzhalter, den Termin eintragen zu können.	
         <textarea placeholder="Gebe dein Termin ein" id="myTextArea" cols="20" rows="5"></textarea>
         <button id="button">Eintragen!</button>
     </div>
